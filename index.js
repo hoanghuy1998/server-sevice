@@ -13,7 +13,6 @@ dotenv.config();
 app.use(cors());
 
 //connect mongoodb
-console.log("process", process.env.URL);
 const connect = async () => {
   await mongoose.connect(`${process.env.URL}`, (err) => {
     if (err) console.log("err", err);
