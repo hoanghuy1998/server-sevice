@@ -22,6 +22,7 @@ const connect = async () => {
 };
 connect();
 require("./routers/author.router")(app);
+app.use("/", (req, res) => res.send("server started"));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
